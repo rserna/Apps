@@ -1,89 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>Basic usage</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <script src="Scripts/jquery.min.js"></script>
-    <script src="Scripts/kendo.mobile.min.js"></script>
-    <script src="Scripts/console.js"></script>
-    <link href="Scripts/kendo.common.min.css" rel="stylesheet" />
-    <link href="Scripts/kendo.mobile.all.min.css" rel="stylesheet" />
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>NFC Reader Demo</title>
+<link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap-nfc-0.4.1.js"></script>
+<script type="text/javascript" charset="utf-8" src="main.js"></script>
 </head>
-<body>
-    <a href="../index.html">Back</a>
-    <div data-role="view" id="button-home" data-title="Sports Academy">
-        <div class="home head">&nbsp;</div>   
-        <a class="button" data-role="button" href="#button-home" style="color: #fff; background-color: #f60">Home</a><a class="button" data-role="button" href="#facility">Facility</a><a class="button" data-role="button" href="#sports">Sports</a>
-        <ul data-role="listview" data-style="inset">
-            <li>
-                <p>Our Sports Academy provides a venue for outdoor and indoor sports and activities for children and adults of all ages.</p>
-            </li>
-        </ul>
-    </div>
 
-    <div data-role="view" id="facility" data-title="Facility">
-        <div class="facility head">&nbsp;</div>
-        <a class="button" data-role="button" href="#button-home">Home</a><a class="button" data-role="button" href="#facility" style="color: #fff; background-color: #f60">Facility</a><a class="button" data-role="button" href="#sports">Sports</a>
-        <ul data-role="listview" data-style="inset">
-            <li>
-                <p>The facility has two indoor basketball fields, olympic size swimming pool, outdoor soccer field, baseball field, golf club and more.</p>
-            </li>
-        </ul>
-    </div>
-
-    <div data-role="view" id="sports" data-title="Sports">
-        <div class="sports head">&nbsp;</div>
-        <a class="button" data-role="button" href="#button-home">Home</a><a class="button" data-role="button" href="#facility">Facility</a><a class="button" data-role="button" href="#sports" style="color: #fff; background-color: #f60">Sports</a>
-        <ul data-role="listview" data-style="inset">
-            <li>American Football</li>
-            <li>Baseball</li>
-            <li>Basketball</li>
-            <li>Football</li>
-            <li>Golf</li>
-            <li>Swimming</li>
-        </ul>
-    </div>
-
-    <style scoped>
-        .button {
-            margin: 0 0 0 .5em;
-            text-align: center;
-        }
-        .button:first-of-type {
-            margin: 0 0 0 1em;
-        }
-        .home {
-            background: url(Scripts/sports-home.jpg) no-repeat center center;	
-        }
-        .facility {
-            background: url(Scripts/sports-facility.jpg) no-repeat center center;	
-        }
-        .sports {
-            background: url(Scripts/sports.jpg) no-repeat center center;	
-        }
-        #button-home .head,
-        #facility .head,
-        #sports .head {
-	        display: block;
-	        margin: 1em;
-	        height: 120px;
-            -webkit-background-size: 100% auto;
-            background-size: 100% auto;
-        }
-        .km-ios .head,
-        .km-blackberry .head {
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-    </style>
-
-    <script>
-        $("#home-link").kendoMobileButton();
-    </script>
-
-
-    <script>
-        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
-    </script>
+<body onload="init()">
+  <h1>PhoneGap NFC Reader</h1>
+  <div id="tagContents">
+  </div>
 </body>
 </html>
